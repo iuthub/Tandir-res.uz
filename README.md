@@ -32,7 +32,10 @@ Techieland is a software solution for cafe and restourant businesses.
 <h3>Tables</h3>
 
 
-<table>
+
+<div class="row">
+  <div class="column">
+  	<table>
 <caption>Roles</caption>
     <tbody>
         <tr>
@@ -153,8 +156,9 @@ Techieland is a software solution for cafe and restourant businesses.
     </tbody>
 </table>
 
-
-<table>
+  </div>
+  <div class="column">
+  	<table>
     <caption>category</caption>
     <tbody>
         <tr>
@@ -286,3 +290,7 @@ Techieland is a software solution for cafe and restourant businesses.
         </tr>
     </tbody>
 </table>
+  </div>
+</div> 
+
+
