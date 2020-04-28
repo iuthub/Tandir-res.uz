@@ -22,19 +22,18 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <h3>Tools used</h3>
 <ol>
-	<tr><td><a href="https://dbdiagram.io/">dbdiagram.io</a> - web-site for drawing EER Diagrams</td></tr>
-	<tr><td><a href="https://phpMyAdmin.net">phpMyAdmin</a></td></tr>
-	<tr><td><a href="dev.mysql.com">MariaDB | MySQL</a></td></tr>
-	<tr><td><a href="https://Mockgaroo.com/">Mockgaroo - generator of dump information</a></td></tr>
+	<li><a href="https://dbdiagram.io/">dbdiagram.io</a> - web-site for drawing EER Diagrams</li>
+	<li><a href="https://phpMyAdmin.net">phpMyAdmin</a></li>
+	<li><a href="dev.mysql.com">MariaDB | MySQL</a></li>
+	<li><a href="https://Mockgaroo.com/">Mockgaroo - generator of dump information</a></li>
 </ol>
 
 
 <h3>Tables</h3>
 
+
 <table>
-    <caption>Roles</caption>
-<table>
-<table>
+<caption>Roles</caption>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -56,8 +55,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>staff</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -89,8 +86,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>clients</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -112,8 +107,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>board_type</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -135,8 +128,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>boards</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -165,8 +156,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>category</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -185,8 +174,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>meals</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -230,8 +217,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>orders</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -256,8 +241,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>board_orders</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
@@ -276,8 +259,6 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>meal_orders</caption>
-<table>
-<table>
     <tbody>
         <tr>
             <td><b>id</b></td>
