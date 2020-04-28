@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/Techieland3.svg" w<b>id</b>th="800"></p>
+<p align="center"><img src="./assets/Techieland3.svg" width="800"></p>
 <p align="center">
 	<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 	<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
@@ -33,7 +33,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>Roles</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -56,7 +56,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>staff</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -89,7 +89,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>clients</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -112,7 +112,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>board_type</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -135,7 +135,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>boards</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -165,7 +165,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>category</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -185,7 +185,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>meals</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -230,7 +230,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>orders</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -256,7 +256,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>board_orders</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
@@ -276,7 +276,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 <table>
     <caption>meal_orders</caption>
-</table>
+<table>
 <table>
     <tbody>
         <tr>
