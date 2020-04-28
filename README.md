@@ -11,7 +11,7 @@
 
 Techieland is a software solution for cafe and restourant businesses.
 - Simple
-- Powerfli
+- Powerful
 - User-friendly
 - Free
 
