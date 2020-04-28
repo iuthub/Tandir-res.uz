@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/Techieland.svg" width="400"></p>
+<p align="center"><img src="./assets/Techieland3.svg" width="400"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -18,7 +18,7 @@ Techieland is a software solution for cafe and restourant businesses.
 
 ## Migrations
 
-<p align="center"><img src="./assets/Techieland2.png" width="400"></p>
+<p align="center"><img src="./database/db-for-project/ip-project-restourant.png" width="400"></p>
 
 <h4></h4>
 <ul></ul>
