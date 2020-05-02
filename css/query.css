@@ -1,0 +1,25 @@
+@media (min-width: 1500px) {
+	.container, .container-lg, .container-md, .co-ntainersm, .container-xl {
+	    max-width: 1440px;
+	}
+}
+
+@media (min-width: 1800px) {
+	.container, .container-lg, .container-md, .co-ntainersm, .container-xl {
+	    max-width: 1720px;
+	}
+}
+
+@media (max-width: 768px) {
+	#nav-list .nav-link:hover {
+		color: white;
+		opacity: 1;
+		transform: translateX(10px);
+	}
+
+	.hero {
+		text-align: center;
+		color: white;
+		margin-top: 7em;
+	}
+}
