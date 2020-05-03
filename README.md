@@ -11,7 +11,7 @@
 
 Techieland is a software solution for cafe and restourant businesses.
 - Simple
-- Powerfli
+- Powerful
 - User-friendly
 - Free
 
@@ -20,116 +20,271 @@ Techieland is a software solution for cafe and restourant businesses.
 <p align="center"><img src="./database/db-for-project/ip-project-restourant.png"></p>
 
 
-<h3>Tool used</h3>
+<h3>Tools used</h3>
 <ol>
-	<li>dbdiagram.io - web-site for drawing EER Diagrams</li>
-	<li>phpMyAdmin</li>
-	<li>MariaDB</li>
-	<li>Mockgaroo - generator of dump information</li>
+	<li><a href="https://dbdiagram.io/">dbdiagram.io</a> - web-site for drawing EER Diagrams</li>
+	<li><a href="https://phpMyAdmin.net">phpMyAdmin</a></li>
+	<li><a href="dev.mysql.com">MariaDB | MySQL</a></li>
+	<li><a href="https://Mockgaroo.com/">Mockgaroo - generator of dump information</a></li>
 </ol>
 
 
 <h3>Tables</h3>
 
-<h4>roles</h4>
-<ul>
-	<li>id</li>
-	<li>role</li>
-	<li>edit_privilege</li>
-	<li>is_admin</li>
-</ul>
 
-<h4>staff</h4>
-<ul>
-	<li>id</li>
-	<li>role_id</li>
-	<li>username</li>
-	<li>password</li>
-	<li>first_name</li>
-	<li>last_name</li>
-	<li>phone_number</li>
-	<li>email</li>
-</ul>
 
-<h4>clients</h4>
-<ul>
-	<li>id</li>
-	<li>first_name</li>
-	<li>last_name</li>
-	<li>phone_number</li>
-	<li>email</li>
-</ul>
 
-<h4>board_type</h4>
-<ul>
-	<li>id</li>
-	<li>type</li>
-	<li>description</li>
-	<li>capacity</li>
-	<li>price</li>
-</ul>
+<table>
+<caption>Roles</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>role</td>
+        </tr>
+        <tr>
+            <td>edit_privilege</td>
+        </tr>
+        <tr>
+            <td>is_admin</td>
+        </tr>
+    </tbody>
+</table>
 
-<h4>boards</h4>
-<ul>
-	<li>id</li>
-	<li>type_id</li>
-	<li>is_available</li>
-	<li>added_by</li>
-	<li>added_time</li>
-	<li>edited_by</li>
-	<li>edited_time</li>
-</ul>
 
-<h4>category</h4>
-<ul>
-	<li>id</li>
-	<li>name</li>
-	<li>description</li>
-	<li>portion_units</li>
-</ul>
 
-<h4>meals</h4>
-<ul>
-	<li>id</li>
-	<li>name</li>
-	<li>category_id</li>
-	<li>price</li>
-	<li>portion</li>
-	<li>is_available</li>
-	<li>ingredients</li>
-	<li>ready_time</li>
-	<li>added_by</li>
-	<li>added_time</li>
-	<li>edited_by</li>
-	<li>edited_time</li>
-</ul>
 
-<h4>orders</h4>
-<ul>
-	<li>id</li>
-	<li>client_id</li>
-	<li>is_approved</li>
-	<li>approved_by</li>
-	<li>date</li>
-	<li>total_price</li>
-</ul>
+<table>
+    <caption>staff</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>role_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>username</td>
+        </tr>
+        <tr>
+            <td>password</td>
+        </tr>
+        <tr>
+            <td>first_name</td>
+        </tr>
+        <tr>
+            <td>last_name</td>
+        </tr>
+        <tr>
+            <td>phone_number</td>
+        </tr>
+        <tr>
+            <td>email</td>
+        </tr>
+    </tbody>
+</table>
 
-<h4>board_orders</h4>
-<ul>
-	<li>id</li>
-	<li>order_id</li>
-	<li>board_id</li>
-	<li>order_time</li>
-</ul>
 
-<h4>meal_orders</h4>
-<ul>
-	<li>id</li>
-	<li>order_id</li>
-	<li>board_order_id</li>
-	<li>meal_id</li>
-	<li>quantity</li>
-	<li>total_price</li>
-	<li>order_time</li>
-	<li>ready_time</li>
-</ul>
+<table>
+    <caption>clients</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>first_name</td>
+        </tr>
+        <tr>
+            <td>last_name</td>
+        </tr>
+        <tr>
+            <td>phone_number</td>
+        </tr>
+        <tr>
+            <td>email</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>board_type</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>type</td>
+        </tr>
+        <tr>
+            <td>description</td>
+        </tr>
+        <tr>
+            <td>capacity</td>
+        </tr>
+        <tr>
+            <td>price</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>boards</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>type_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>is_available</td>
+        </tr>
+        <tr>
+            <td>added_by</td>
+        </tr>
+        <tr>
+            <td>added_time</td>
+        </tr>
+        <tr>
+            <td>edited_by</td>
+        </tr>
+        <tr>
+            <td>edited_time</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table>
+    <caption>category</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>name</td>
+        </tr>
+        <tr>
+            <td>description</td>
+        </tr>
+        <tr>
+            <td>portion_units</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>meals</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>name</td>
+        </tr>
+        <tr>
+            <td>category_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>price</td>
+        </tr>
+        <tr>
+            <td>portion</td>
+        </tr>
+        <tr>
+            <td>is_available</td>
+        </tr>
+        <tr>
+            <td>ingredients</td>
+        </tr>
+        <tr>
+            <td>ready_time</td>
+        </tr>
+        <tr>
+            <td>added_by</td>
+        </tr>
+        <tr>
+            <td>added_time</td>
+        </tr>
+        <tr>
+            <td>edited_by</td>
+        </tr>
+        <tr>
+            <td>edited_time</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table>
+    <caption>orders</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>client_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>is_approved</td>
+        </tr>
+        <tr>
+            <td>approved_by</td>
+        </tr>
+        <tr>
+            <td>date</td>
+        </tr>
+        <tr>
+            <td>total_price</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>board_orders</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>order_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>board_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>order_time</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>meal_orders</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>order_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>board_order_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>meal_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>quantity</td>
+        </tr>
+        <tr>
+            <td>total_price</td>
+        </tr>
+        <tr>
+            <td>order_time</td>
+        </tr>
+        <tr>
+            <td>ready_time</td>
+        </tr>
+    </tbody>
+</table>
