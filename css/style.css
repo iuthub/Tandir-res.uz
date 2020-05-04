@@ -7,13 +7,13 @@
 
 @media (max-width: 768px) {
 	:root {
-		font-size: calc(1vw + 0.6em);	/* FLEXABLE EM VALUE IN <768*/
+		font-size: calc(1vw + 0.6em);	/* FLEXABLE EM VALUE IN <768 */
 	}
 }
 
 .navbar {
-	background-color: var(--bg-color);
-	opacity: 0.8;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0.8; 
 	padding: 0 1em;
 	position: fixed;
 	top: 0;
@@ -21,10 +21,12 @@
 	left: 0;
 	z-index: 1030;
 	border-top: 3px solid var(--brand-red);
+	transition: all 0.3s ease-out;
 }
 
 .navbar:hover {
-	opacity: 0.9;
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 #nav-list .navbar-nav {
@@ -36,7 +38,7 @@
 	opacity: 0.8;
 	text-transform: uppercase;
 	font-size: 0.7rem;
-	transition: transform .07s ease-out, color 0s;
+	transition: transform 0.07s ease-out, color 0s;
 }
 
 #nav-list .nav-link:hover {
@@ -66,7 +68,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 100vh;
-	min-height: calc(27.27vw + 27.27em);
+	min-height: calc(27.27vw + 27.27rem);
 }
 
 .carousel-item::before {
