@@ -20,14 +20,13 @@ $('#date').datepicker({
 });
 
 $('#date').datepicker('update', new Date());
-
 $('.timepicker').timepicker({
     timeFormat: 'HH:mm',
     interval: 60,
-    minTime: '10',
+    minTime: '09',
     maxTime: '6:00pm',
     defaultTime: time,
-    startTime: '10:00',
+    startTime: time,
     dynamic: false,
     dropdown: true,
     scrollbar: true
