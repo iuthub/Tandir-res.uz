@@ -22,7 +22,6 @@ class CreateStaffTable extends Migration
             $table->string('last_name');
             $table->string('phone_number');
             $table->string('email');
-
         });
     }
 
