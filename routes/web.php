@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/contact',function(){return view('pages.contact');})->name('contactPage');
+Route::post('/sendContactMessage','PagesController@sendMessage')->name('sendContactMessage');
 //Authentication Routes
 //Views
 Route::get('/login','LoginController@show')->name('login')->middleware('guest');
@@ -31,4 +32,5 @@ Route::post('/registerPost','RegisterController@register')->name('registerPost')
 //Protected routes: Only authenticated users can get in
 Route::middleware('auth')->group(function(){
 	Route::get('/dashboard','DashboardController@index')->name('dashboard');
+	Route::get('/logout','LoginController@logout')->name('logout');
 });
