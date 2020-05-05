@@ -2,7 +2,8 @@
 	font-size: calc(1vw + 0.2em);	/* FLEXABLE EM VALUE IN >768 */
 	--brand-red: #bf3030;
 	--brand-red-hover: #ff3030;
-	--bg-color: #1a1a1a;
+	--bg-dark: #333333;
+	--bg-light: #fffbf5;
 }
 
 @media (max-width: 768px) {
@@ -11,9 +12,32 @@
 	}
 }
 
+body {
+	background-color: var(--bg-dark);
+	background-image: url("../img/bg.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+}
+
+footer {
+	margin: 0;
+	padding-top: 10em;
+	padding-bottom: 3em;
+	background-color: var(--bg-dark);
+	color: #737373;
+	border-color: #737373;
+	font-size: 0.85rem;
+}
+
+footer .border-top {
+	border-color: #737373!important;
+}
+
 .navbar {
-	background-color: rgba(0, 0, 0, 0.5);
-	opacity: 0.8; 
+	background-color: rgba(0, 0, 0, 0.8);
+	/*opacity: 0.9;*/
 	padding: 0 1em;
 	position: fixed;
 	top: 0;
@@ -26,7 +50,7 @@
 
 .navbar:hover {
 	opacity: 1;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 #nav-list .navbar-nav {
@@ -67,8 +91,8 @@
 	background-position: 70% 0;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100vh;
 	min-height: calc(27.27vw + 27.27rem);
+	height: 100vh;
 }
 
 .carousel-item::before {
@@ -79,7 +103,7 @@
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, .4);
+	background-color: rgba(0, 0, 0, .5);
 }
 
 .hero {
@@ -92,4 +116,21 @@
 	margin-top: 2em;
 	padding: 0.375em 2em;
 	font-size: 1.7rem;
+}
+
+/*************************** PRODUCTS ***************************/
+
+.section-heading {
+	justify-content: center;
+	/*margin-top: 5em;*/
+	align-items: center;
+}
+
+.section-heading div {
+	text-align: center;
+}
+
+.section-body {
+	justify-content: center;
+	margin-top: 5em;
 }
