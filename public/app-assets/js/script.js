@@ -1,0 +1,34 @@
+$('.carousel').carousel({
+  interval: 7000
+})
+
+
+var dt = new Date();
+var time = dt.getHours() + 1 + ":" + "00";
+var date = dt.getDay() + "/" + dt.getMonth() + "/" + dt.getYear();
+
+$('#date').datepicker({
+    format: "dd/mm/yyyy",
+    weekStart: 1,
+    maxViewMode: 1,
+    todayBtn: "linked",
+    daysOfWeekHighlighted: "0,6",
+    calendarWeeks: true,
+    autoclose: true,
+    // todayHighlight: true,
+    toggleActive: true
+});
+
+$('#date').datepicker('update', new Date());
+
+$('.timepicker').timepicker({
+    timeFormat: 'HH:mm',
+    interval: 60,
+    minTime: '10',
+    maxTime: '6:00pm',
+    defaultTime: time,
+    startTime: '10:00',
+    dynamic: false,
+    dropdown: true,
+    scrollbar: true
+});
