@@ -10,6 +10,18 @@
 	}
 }
 
+@media (min-width: 2200px) {
+	.container, .container-lg, .container-md, .co-ntainersm, .container-xl {
+	    max-width: 2020px;
+	}
+}
+
+@media (min-width: 3200px) {
+	.container, .container-lg, .container-md, .co-ntainersm, .container-xl {
+	    max-width: 3020px;
+	}
+}
+
 @media (max-width: 767px) {
 	#nav-list .nav-link:hover {
 		color: white;
@@ -32,4 +44,15 @@
 		font-size: 1.3rem;
 		padding: 0;
 	}	
+}
+
+@media (max-width: 575px) {
+	#delecious .single_delicious {
+		display: block!important;
+	}
+
+	.single_delicious .info {
+		padding-left: 0;
+		padding-top: 0.5em;
+	}
 }
