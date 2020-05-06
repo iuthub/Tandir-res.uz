@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 575px) {
-	#delecious .single_delicious {
+	#delicious .single_delicious {
 		display: block!important;
 	}
 

@@ -4,6 +4,7 @@
 	--brand-red-hover: #ff3030;
 	--bg-dark: #333333;
 	--bg-light: #fffbf5;
+	--goldish: #db9a64;
 }
 
 @media (max-width: 767px) {
@@ -150,6 +151,61 @@ footer .border-top {
 	margin-top: 5em;
 }
 
+#delicious .delicious {
+	background-color: var(--bg-light);
+	border-radius: .3em;
+	padding: 4em 3em;
+	color: black;
+}
+
+#delicious ul {
+	flex-wrap: nowrap;
+	margin-bottom: 5em;
+	border-bottom: 1px solid #D5D5D5;
+}
+
+#delicious ul .active {
+	color: var(--goldish);
+	border-bottom: 3px solid var(--goldish);
+}
+
+#delicious ul a {
+	color: black;
+	font-size: 1rem;
+}
+
+#delicious .tab-pane img {
+	max-height: 8em;
+	max-width: 8em;
+}
+
+.single_delicious {
+	margin-bottom: 3em;
+}
+
+.single_delicious .info {
+	padding-left: 1em;
+}
+
+.single_delicious .info h3 {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.single_delicious .info p {
+	font-size: 0.8rem;
+	font-weight: 300;
+	margin-top: 0.7em;
+	margin-bottom: 1.3em;
+}
+
+.single_delicious .info span {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--goldish);
+}
+
 /*************************** CONTACT ***************************/
 
 #contact-main {
@@ -181,11 +237,11 @@ footer .border-top {
 	margin-top: 3em;
 }
 
-.breadcrumb a{
+.breadcrumb a {
 	color: var(--brand-red);
 }
 
-.breadcrumb-item.active{
+.breadcrumb-item.active {
 	color: #8B959E;
 }
 
@@ -195,6 +251,13 @@ footer .border-top {
 
 #contact {
 	padding: 5em 0;
-	color:black;
-	background: #ccc;
+	color: black;
+}
+
+#contact form, #contact .address, #contact .more-info {
+	border-radius: 0.3em;
+}
+
+#contact .address, #contact .more-info p {
+	font-size: 0.8rem;
 }
