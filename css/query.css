@@ -39,6 +39,10 @@
 		font-size: 3rem;
 	}
 
+	.site-section {
+		padding: 2.5em;
+	}
+
 	.breadcrumb {
 		justify-content: center;
 		font-size: 1.3rem;
