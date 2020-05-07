@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -37,3 +38,26 @@ Route::resource('admin/orders' ,'AdminOrdersController');
 // Route::get('admin/users/create','AdminUsersController@create')->name('admin.users.create');
 
 
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/contact',function(){return view('pages.contact');})->name('contactPage');
+Route::post('/sendContactMessage','PagesController@sendMessage')->name('sendContactMessage');
+//Authentication Routes
+//Views
+Route::get('/login','LoginController@show')->name('login')->middleware('guest');
+Route::get('/register','RegisterController@show')->name('register')->middleware('guest');
+
+//Posts
+
+Route::post('/loginPost','LoginController@login')->name('loginPost');
+Route::post('/registerPost','RegisterController@register')->name('registerPost');
+
+
+//Protected routes: Only authenticated users can get in
+Route::middleware('auth')->group(function(){
+	Route::get('/dashboard','DashboardController@index')->name('dashboard');
+	Route::get('/logout','LoginController@logout')->name('logout');
+});
+>>>>>>> 032f8534a24b57d522c9a6a27fbb048932b1eb15
