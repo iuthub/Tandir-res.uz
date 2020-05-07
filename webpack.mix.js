@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-
+var elixir = require('laravel-elixir');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

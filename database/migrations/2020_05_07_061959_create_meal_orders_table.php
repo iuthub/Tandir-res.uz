@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBoardsTable extends Migration
+class CreateMealOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateBoardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('boards', function (Blueprint $table) {
+        Schema::create('meal_orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('type_id');
-            $table->boolean('is_available');
-            $table->string('added_by');
-            $table->time('added_time');
-            $table->string('edited_by');
-            $table->time('edited_time');
+            $table->integer('order_id');
+            $table->integer('meal_id');
+            $table->integer('quantity');
+            $table->timestamp('order_time');
+            $table->integer('total_price');
 
         });
     }
@@ -32,6 +31,6 @@ class CreateBoardsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('boards');
+        Schema::dropIfExists('meal__orders');
     }
 }
