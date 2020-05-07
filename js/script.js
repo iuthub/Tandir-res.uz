@@ -2,6 +2,7 @@ $('.carousel').carousel({
   interval: 7000
 })
 
+$('input[name="phone"]').mask('+998 11 111 11 11');
 
 var dt = new Date();
 var time = dt.getHours() + 1 + ":" + "00";
@@ -20,6 +21,7 @@ $('#date').datepicker({
 });
 
 $('#date').datepicker('update', new Date());
+
 $('.timepicker').timepicker({
     timeFormat: 'HH:mm',
     interval: 60,
