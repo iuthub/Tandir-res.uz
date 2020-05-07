@@ -60,4 +60,4 @@ Route::middleware('auth')->group(function(){
 	Route::get('/dashboard','DashboardController@index')->name('dashboard');
 	Route::get('/logout','LoginController@logout')->name('logout');
 });
->>>>>>> 032f8534a24b57d522c9a6a27fbb048932b1eb15
+
