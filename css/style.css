@@ -151,9 +151,17 @@ footer .border-top {
 	margin-top: 5em;
 }
 
-#delicious .delicious {
+/*****************************************
+#delicious .deliciouss {
 	background-color: var(--bg-light);
 	border-radius: .3em;
+	padding: 4em 3em;
+	color: black;
+}
+*****************************************/
+
+#delicious {
+	background-color: var(--bg-light);
 	padding: 4em 3em;
 	color: black;
 }
