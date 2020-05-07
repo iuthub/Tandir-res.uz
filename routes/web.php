@@ -38,7 +38,7 @@ Route::resource('admin/orders' ,'AdminOrdersController');
 // Route::get('admin/users/create','AdminUsersController@create')->name('admin.users.create');
 
 
-=======
+//=======
 Route::get('/', function () {
     return view('welcome');
 });
