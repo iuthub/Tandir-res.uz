@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBoardOrdersTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateBoardOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('board__orders', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->integer('order_id');
-            $table->integer('board_id');
-            $table->time('order_time');
-
+            $table->string('role');
+            $table->boolean('is_admin');
         });
     }
 
@@ -29,6 +27,6 @@ class CreateBoardOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('board__orders');
+        Schema::dropIfExists('roles');
     }
 }
