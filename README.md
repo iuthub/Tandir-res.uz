@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/tandir.png" width="800"></p>
+<p align="center"><a href="https://tandir-res.uz"><img src="./assets/tandir.png" width="800"></a></p>
 <p align="center">
 	<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 	<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
@@ -7,7 +7,7 @@
 </p>
 
 
-## About Tandir
+## About Tandir  web-page: www.tandir-res.uz
 
 Tandir is a software solution for cafe and restourant businesses made in Laravel framework and made with love by Techieland<sup>tm</sup>
 - Simple
