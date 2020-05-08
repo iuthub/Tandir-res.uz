@@ -39,7 +39,7 @@ Tandir is a software solution for cafe and restourant businesses made in Laravel
 - Pre-requirements:
 1. Install <a href="https://www.apachefriends.org/ru/index.html">XAMPP</a>
 2. Install <a href="https://getcomposer.org/">Composer</a>
-3. Install <a hreg="https://git-scm.com/">GIT</a>
+3. Install <a href="https://git-scm.com/">GIT</a>
 
 - Steps to run the software on your local machine:
 1. Clone this repository to "xampp/htdocs" directory.
