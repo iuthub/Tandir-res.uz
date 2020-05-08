@@ -7,7 +7,7 @@
 </p>
 
 
-## About Tandir web-page:  tandir-res.uz
+## About Tandir web-page:  <a href="http://tandir-res.uz/"><b>tandir-res.uz</b></a>
 
 Tandir is a software solution for cafe and restourant businesses made in Laravel framework and made with love by Techieland<sup>tm</sup>
 - Simple
@@ -27,7 +27,7 @@ Tandir is a software solution for cafe and restourant businesses made in Laravel
 
 ## How to use it as an Administrator
 
-1. Open admin.tandir-res.uz route
+1. Open <a href="http://admin.tandir-res.uz/"><b>admin.tandir-res.uz</b></a>
 2. Log-in.
 3. View and analyse all tables about your business.
 4. Create/edit/delete some features from your products list.
