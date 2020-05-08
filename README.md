@@ -34,6 +34,11 @@ Tandir is a software solution for cafe and restourant businesses made in Laravel
 5. Create/edit/delete users and admins.
 6. Approve the order and send email service.
 
+
+- <b>We are planning to do a Docker image for that app, so in the near future new version will be available on DockerHub also.</b> 
+- After release you will need to just pull the image and run container.
+- <a href="https://www.docker.com/">Learn more about Docker there!</a>
+
 ## Migrations
 
 <p align="center"><img src="./assets/resto.png"></p>
