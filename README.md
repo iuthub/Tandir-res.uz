@@ -6,14 +6,21 @@
 	<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## About <a href="http://tandir-res.uz/"><b>Tandir-res.uz</b></a>
 
-## About Tandir web-page:  <a href="http://tandir-res.uz/"><b>tandir-res.uz</b></a>
-
-Tandir is a software solution for cafe and restourant businesses made in Laravel framework and made with love by Techieland<sup>tm</sup>
+Tandir is a software solution for cafe and restourant businesses made in Laravel framework and made with &#9829; by <sup>1</sup>Techieland&#8482;
 - Simple
 - Powerful
 - User-friendly
 - Open source
+
+PS: **Tandir** brand name has created by Techieland for this assignment only \(we haven't checked weather this brand name is available out there or not\) and we have craeted simple logo for this.
+
+## <sup>1</sup> Techieland
+
+**Techieland** is our teamname who creates software solutions for businesses.
+
+We tried to treat this assignment process as real as possible.
 
 ## How to use it as a Client
 
