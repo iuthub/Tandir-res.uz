@@ -73,6 +73,6 @@ Route::resource('admin/meals', 'AdminMealsController');
 
 //-----------------------------END OF SOBIR'S PART---------------------------------------------------//
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

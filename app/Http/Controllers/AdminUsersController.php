@@ -19,7 +19,7 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        $staffs = User::all();
+        $staffs = User::paginate(9);
 
 
         return view('admin.users.index',compact('staffs'));

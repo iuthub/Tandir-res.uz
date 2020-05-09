@@ -7,6 +7,7 @@ use App\Meal_Orders;
 use App\Meals;
 use App\Orders;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Collection;
 
 class AdminOrdersController extends Controller
 {

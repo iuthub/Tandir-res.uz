@@ -13,30 +13,39 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>Order ID </th>
-          <th>Meal ID</th>
+          <th>Customer Name </th>
+          <th>Meal </th>
           <th>Quantity</th>
           <th>Order Time</th>
           <th>Total Price</th>
-          <th>Edit</th>
           <th>Delete</th>
+
         </tr>
       </thead>
       <tbody>
 
-    @if ($meal_orders)
+    @if ($meal_orders || $meal_orders || $meal_orders)
         @foreach ($meal_orders as $meal_order)
 
-            <tr>
-                <td>{{ $meal_order->id }}</td>
-                <td>{{ $meal_order->order_id }}</td>
-                <td>{{ $meal_order->meal_id }}</td>
-                <td>{{ $meal_order->quantity }}</td>
-                <td>{{ $meal_order->order_time }}</td>
-                <td>{{ $meal_order->total_price }}</td>
-                <td><a href="#" class="btn btn-primary">Edit</a></td>
-                <td><a href="#" class="btn btn-danger">Delete</a></td>
-            </tr>
+                    <tr>
+                        <td>{{ $meal_order->id }}</td>
+                        <td>{{ $meal_customer }}</td>
+                        <td>{{ $meal_name }}</td>
+                        <td>{{ $meal_order->quantity }}</td>
+                        <td>{{ $meal_order->order_time }}</td>
+                        <td>{{ $meal_order->total_price }}</td>
+                        <td>
+                            {!! Form::open(['method'=>'DELETE','action'=>['AdminMealOrdersController@destroy',$meal_order->id]]) !!}
+
+                            <div class="form-group">
+                                    {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
+                            </div>
+                            {!! Form::close() !!}
+
+                        </td>
+                    </tr>
+
+
         @endforeach
     @endif
 

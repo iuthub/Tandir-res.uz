@@ -75,7 +75,14 @@
 
     </tbody>
     </table>
-  </div>
+
+     <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">
+            {{ $staffs->render() }}
+        </div>
+     </div>
+
+</div>
 
 
 

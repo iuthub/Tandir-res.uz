@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Meal_Orders;
+use App\Meals;
 use App\Orders;
 use Illuminate\Http\Request;
 
@@ -19,11 +20,37 @@ class AdminMealOrdersController extends Controller
 
         $meal_orders = $meal_orders->sortBy('date',SORT_REGULAR,false);
 
-        $orders = Orders::select('first_name')->get();
+        $orders = Orders::all();
+        $meals = Meals::all();
 
+        foreach ($meal_orders as $meal_order)
+         {
+            foreach ($orders as $order)
+            {
+                foreach ($meals as $meal)
+                {
+                    if($meal_order->order_id == $order->id)
+                    {
+                        $meal_customer = $order->first_name;
+                    }
+                    else
+                    {
+                        $meal_customer = $meal_order->order_id;
+                    }
+                    if ($meal_order->meal_id == $meal->id ) {
 
+                        $meal_name = $meal->name;
 
-        return view('admin.orders.meal_order',compact('meal_orders'));
+                    }
+                    else
+                    {
+                        $meal_name = $meal_order->meal_id;
+                    }
+                }
+            }
+        }
+
+        return view('admin.orders.meal_order',compact('meal_orders','meal_customer','meal_name'));
     }
 
     /**
@@ -89,6 +116,11 @@ class AdminMealOrdersController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        Meal_Orders::findOrFail($id)->delete();
+
+        return redirect('/admin/meal_orders');
+
+
     }
 }
