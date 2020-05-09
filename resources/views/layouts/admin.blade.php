@@ -59,24 +59,27 @@
 
         <ul class="nav navbar-top-links navbar-right">
 
+            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+            </li>
+            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
 
-            <!-- /.dropdown -->
+            {{-- <!-- /.dropdown -->
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </li>
+
+
+
                 </ul>
                 <!-- /.dropdown-user -->
             </li>
-            <!-- /.dropdown -->
+            <!-- /.dropdown --> --}}
 
 
         </ul>
@@ -124,53 +127,60 @@
                         </div>
                         <!-- /input-group -->
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('admin.dashboard') }}"><i class="fa fa-bar-chart fa-fw"></i> Dashboard</a>
-                    </li>
+                    </li> --}}
 
                     <li>
-                        <a href="{{ route('users.create') }}"><i class="fa fa-user-plus fa-fw"></i> Create Staff</a>
+                        <a href="{{ route('admin.users.create') }}"><i class="fa fa-user-plus fa-fw"></i> Create Staff</a>
                     </li>
 
 
-                    <li>
+                    {{-- <li>
                         <a href="#"><i class="fa fa-users fa-fw"></i> Users<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
+                        <ul class="nav nav-second-level"> --}}
 
                             <li>
-                                <a href="{{ route('users.index') }}"><i class="fa fa-table fa-fw"></i> Staves</a>
+                                <a href="{{ route('users.index') }}"><i class="fa fa-users fa-fw"></i> Staff</a>
                             </li>
 
-                            <li>
-                                <a href="{{ route('admin.users.client') }}"><i class="fa fa-table fa-fw"></i> Clients</a>
-                            </li>
 
+{{--
                         </ul>
+                        <!-- /.nav-second-level -->
+                    </li> --}}
+
+                    <li>
+                        <a href="{{ route('orders.index') }}"><i class="fa fa-table fa-fw"></i> Orders</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('meal_orders.index') }}"><i class="fa fa-table fa-fw"></i> Meal Orders</a>
+                    </li>
+
+
+
                         <!-- /.nav-second-level -->
                     </li>
 
-                    <li>
-                        <a href="{{ route('orders.index') }}"><i class="fa fa-clipboard fa-fw"></i> Orders<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
+                    {{-- <li>
+                        <a href="#"><i class="fas fa-utensils fa-fw"></i> Meals<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level"> --}}
                             <li>
-                                <a href="/posts"><i class="fa fa-table fa-fw"></i> Meal Orders</a>
+                                <a href="{{ route('meals.create') }}"><i class="fas fa-utensils fa-fw"></i> Create New Meal</a>
                             </li>
 
                             <li>
-                                <a href="/posts/create"><i class="fa fa-table fa-fw"></i> Board Orders</a>
+                                <a href="{{ route('meals.index') }}"><i class="fa fa-table fa-fw"></i> Meal Menu</a>
                             </li>
 
-                        </ul>
+
+                        {{-- </ul>
                         <!-- /.nav-second-level -->
-                    </li>
+                    </li> --}}
 
 
-                    <li>
-                        <a href="#"><i class="fas fa-utensils fa-fw"></i> Meals</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fas fa-chair fa-fw"></i> Boards</a>
-                    </li>
+
                 </ul>
 
             </div>

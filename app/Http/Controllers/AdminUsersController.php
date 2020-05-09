@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Clients;
+
 use App\Http\Requests\UsersRequest;
 use App\Roles;
-use App\Staff;
-use App\Photo;
+
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminUsersController extends Controller
@@ -18,7 +18,7 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        $staffs = Staff::all();
+        $staffs = User::all();
 
 
         return view('admin.users.index',compact('staffs'));
@@ -52,17 +52,11 @@ class AdminUsersController extends Controller
      */
     public function store(UsersRequest $request)
     {
-//        $input = $request->all();
-
-        if($file = $request->file('photo_id'))
-        {
-            return "photo exist";
-        }
 
         //PASSWORD ENCRYPTION
         $password =bcrypt($request->password);
 
-        $staffs = new Staff;
+        $staffs = new User;
 
 
         $staffs->role_id = $request->role;
@@ -72,11 +66,10 @@ class AdminUsersController extends Controller
         $staffs->last_name = $request ->last_name;
         $staffs->phone_number = $request ->phone_number;
         $staffs->email = $request ->email;
-        $staffs->photo_id = $request ->photo_id;
 
         $staffs->save();
 
-        //return redirect('/admin/users');
+        return redirect('/admin/users');
     }
 
 
@@ -105,7 +98,11 @@ class AdminUsersController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.users.edit');
+        $staff = User::findOrFail($id);
+
+        $roles = Roles::pluck('role','id')->all();
+
+        return view('admin.users.staff_edit',compact('staff','roles'));
     }
 
 
@@ -119,9 +116,25 @@ class AdminUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UsersRequest $request, $id)
     {
-        //
+        $staff = User::findOrFail($id);
+
+        $password =bcrypt($request->password);
+
+        $staff->role_id = $request->role;
+        $staff->username = $request ->username;
+        $staff->password = $password;
+        $staff->first_name = $request ->first_name;
+        $staff->last_name = $request ->last_name;
+        $staff->phone_number = $request ->phone_number;
+        $staff->email = $request ->email;
+
+        $staff->save();
+
+
+
+        return redirect('/admin/users');
     }
 
 
@@ -137,14 +150,6 @@ class AdminUsersController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function client_view()
-    {
-        $clients = Clients::all();
-
-        return view('admin.users.client_view',compact('clients'));
-
     }
 
 

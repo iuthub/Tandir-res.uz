@@ -5,7 +5,7 @@
 @section('content')
 
 
-<h1>Create New User </h1>
+<h1>Edit User </h1>
 
 
 {{----------Error Message--------------------------}}
@@ -16,7 +16,7 @@
 {{----------/Error Message--------------------------}}
 
 
-{!! Form::open(['method'=>'POST','action'=>'AdminUsersController@store']) !!}
+{!! Form::model($staff,['method'=>'PATCH','action'=>['AdminUsersController@update',$staff->id],'files'=>true]) !!}
 
 <div class="form-group">
     {!! Form::label('username','Username:') !!}
@@ -55,7 +55,7 @@
 </div>
 
 <div class="form-group" style="margin-top: 20px;">
-    {!! Form::submit('Create User', ['class' => 'btn btn-primary']) !!}
+    {!! Form::submit('Edit User', ['class' => 'btn btn-primary']) !!}
 </div>
 
 {!! Form::close() !!}

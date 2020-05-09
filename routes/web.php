@@ -21,24 +21,34 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-//ADMIN HOME PAGE (DASHBOARD)
+//1.VIEW STAFF INFORMATION
+Route::resource('admin/users', 'AdminUsersController');
+
+//2.CREATING NEW STAFF ACCOUNT
+Route::get('admin/users/create','AdminUsersController@create')->name('admin.users.create');
+
+
+//3.ADMIN HOME PAGE (DASHBOARD)
 Route::get('/admin', function(){ return view('admin.index'); } )->name('admin.dashboard');
 
 
-//VIEW STAFF INFORMATION
-Route::resource('admin/users', 'AdminUsersController');
 
-//VIEW CLIENT INFORMATION
-Route::get('admin/clients','AdminUsersController@client_view')->name('admin.users.client');
 
-//VIEW MEAL ORDERS
+//5.VIEW MEAL ORDERS
 Route::resource('admin/orders' ,'AdminOrdersController');
 
-// // CREATING NEW STAFF ACCOUNT
-// Route::get('admin/users/create','AdminUsersController@create')->name('admin.users.create');
+//6.VIEW MEAL ORDERS
+Route::resource('admin/meal_orders','AdminMealOrdersController');
+
+//7.MEALS CONTROLLER
+Route::resource('admin/meals', 'AdminMealsController');
 
 
-//=======
+
+
+//-----------------------------SOBIR'S PART---------------------------------------------------//
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -60,4 +70,7 @@ Route::middleware('auth')->group(function(){
 	Route::get('/dashboard','DashboardController@index')->name('dashboard');
 	Route::get('/logout','LoginController@logout')->name('logout');
 });
+
+
+//-----------------------------END OF SOBIR'S PART---------------------------------------------------//
 
