@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//<<<<<<< HEAD
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 //1.VIEW STAFF INFORMATION
@@ -68,5 +72,5 @@ Route::middleware('auth')->group(function(){
 });
 
 
-
 //-----------------------------END OF SOBIR'S PART---------------------------------------------------//
+
