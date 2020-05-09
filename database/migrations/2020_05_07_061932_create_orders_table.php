@@ -15,7 +15,7 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('first_name');
             $table->string('email');
             $table->string('phone_number');
             $table->integer('number_of_people');
@@ -23,9 +23,7 @@ class CreateOrdersTable extends Migration
             $table->time('time');
             $table->integer('total_price');
             $table->boolean('is_approved');
-            $table->string('approved_by');
-
-        });
+           });
     }
 
     /**

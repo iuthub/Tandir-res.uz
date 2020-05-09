@@ -19,7 +19,9 @@ class CreateMealsTable extends Migration
             $table->integer('category_id');
             $table->integer('price');
             $table->integer('portion');
-            $table->text('definition');
+            $table->text('definition');           
+            $table->boolean('is_available');
+ 
         });
     }
 

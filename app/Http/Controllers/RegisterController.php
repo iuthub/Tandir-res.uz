@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\User as UserModel;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,15 +15,18 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
     	$validate=$request->validate([
-    		'name'=> 'required|min:5',
-    		'email'=> 'required',
-    		'password' => 'required|min:6'
+    		'username'=> 'required|min:5',
+    		'password' => 'required|min:6',
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'phone_number'=>'required',
+            'email'=> 'required',
     	]);
         // return $validate;
     	// var_dump($validate);
         $validate['password']=Hash::make($validate['password']);
         // return $validate['password'];
-    	UserModel::create($validate);
+    	User::create($validate);
     	return redirect()->route('login');
     }
 }
