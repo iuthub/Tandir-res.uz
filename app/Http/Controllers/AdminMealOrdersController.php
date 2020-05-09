@@ -19,7 +19,7 @@ class AdminMealOrdersController extends Controller
 
         $meal_orders = $meal_orders->sortBy('date',SORT_REGULAR,false);
 
-        $orders = Orders::select('first_name')->get();
+        $orders = Orders::select('name')->get();
 
 
 
