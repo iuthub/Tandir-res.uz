@@ -106,6 +106,9 @@ class AdminOrdersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Orders::findOrFail($id)->delete();
+
+        return redirect('/admin/orders');
+
     }
 }
