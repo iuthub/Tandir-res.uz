@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 // Route::group(['middleware' => 'admin'], function () {
 
 //1.ADMIN HOME PAGE (DASHBOARD)
-Route::get('/admin', function(){ return view('admin.index'); } )->name('admin.dashboard');
+Route::get('/admin', 'AdminController@index' )->name('admin.dashboard');
 
 //2.CREATING NEW STAFF ACCOUNT
 Route::get('admin/users/create','AdminUsersController@create')->name('admin.users.create');
@@ -72,3 +72,7 @@ Route::resource('admin/meals', 'AdminMealsController');
 
 
 //-----------------------------END OF SOBIR'S PART---------------------------------------------------//
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

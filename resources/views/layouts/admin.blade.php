@@ -213,9 +213,9 @@
 <!-- jQuery -->
 <script src="{{asset('js/libs.js')}}"></script>
 
+@yield('scripts')
 
-
-@yield('footer')
+{{-- @yield('footer') --}}
 
 
 
