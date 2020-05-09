@@ -1,0 +1,146 @@
+#pick{
+	position:relative;
+}
+
+#pick > .pseudo{
+	position:absolute;
+	content:'pick';
+	width:100%;
+	height:100%;
+	background-color: rgba(255,255,255,0.4);
+	display: none;
+	color:red !important;
+	padding:1em 0;
+	text-align: center;
+	font-size:2em;
+	font-weight: 500;
+	cursor:pointer;
+}
+
+#pick:hover  .pseudo{
+	display:block;
+}
+
+.pickForm{
+	display:none;
+	position:fixed;
+	z-index:1000;
+	color:black;
+	width:30em;
+	height:auto;
+	background-color: white;
+	top:25vh;
+	left:calc(50vw - 15em);
+	text-align:center;
+	padding:1.2em;
+}
+
+.grayCover{
+	position: fixed; 
+	display: none; 
+	width: 100%; 
+	height: 100%; 
+	background-color: rgba(26,26,26,0.8); 
+	z-index: 100;
+}
+
+.cancelPickForm
+{
+	position:absolute;
+	right:0.1em;
+	top:0;
+	font-size: 1.15em;
+	cursor:pointer;
+	padding:0 0.2em;
+	background-color: rgba(128,128,128,0.4);
+}
+
+.pickForm > .info{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows:auto;
+	justify-content:left;
+	grid-gap:0.8em;
+}
+
+.f_group{
+	display:flex;
+	justify-content:space-between;
+	max-width:20em;
+	align-items:end;
+}
+
+input[type=number]{
+	width:5em;
+	text-decoration: none;
+	border:2px  dashed black;
+	padding:0.2em;
+}
+
+input[type=number]:invalid{
+	border-color:red;
+}
+
+.pickForm .order{
+	margin-top:1em;
+}
+
+.pickForm > .priceSection
+{
+	text-align:left;
+	margin-top:2em;
+	margin-bottom:0;
+
+}
+
+.pickForm > .submitPickForm{
+	position: absolute;
+	bottom:1.2em;
+	right:1.2em;
+}
+
+
+/*Item selectlist*/
+
+.selectList{
+	display:none;
+	max-width:70em;
+	padding:1em;
+}
+
+.selectedProductData {
+	/*padding:0.5em 0;*/
+	text-align:center;
+	border:1px solid black;
+}
+
+.selectedProductData  th, .selectedProductData td{
+	border:1px solid black;
+	width:250px;
+}
+
+.saleSubmission > p{
+	margin-top:1em;
+	font-weight:400;
+}
+
+.hiddenAllSales{
+	display:none;
+}
+
+
+.reserveErrors{
+	padding:1em 0;
+	font-size:1em;
+	font-weight: 500;
+	color:red;
+	text-decoration:overline;
+}
+
+.hiddenTotalPrice{
+	display:none;
+}
+
+.hidden{
+	display:none;
+}

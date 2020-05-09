@@ -23,9 +23,7 @@ class CreateOrdersTable extends Migration
             $table->time('time');
             $table->integer('total_price');
             $table->boolean('is_approved');
-
-
-        });
+           });
     }
 
     /**
@@ -35,7 +33,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-       Schema::dropIfExists('orders');
-
+        Schema::dropIfExists('orders');
     }
 }
