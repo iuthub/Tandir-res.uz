@@ -13,16 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/contact',function(){return view('pages.contact');})->name('contactPage');
+Route::get('/', 'PagesController@index')->name('index');
+Route::get('/service', 'PagesController@service')->name('service');
+Route::get('/contact', 'PagesController@contact')->name('contact');
+
 Route::post('/sendContactMessage','PagesController@sendMessage')->name('sendContactMessage');
+Route::post('/reserve','PagesController@reserve')->name('reserve');
+
 //Authentication Routes
 //Views
 Route::get('/login','LoginController@show')->name('login')->middleware('guest');
 Route::get('/register','RegisterController@show')->name('register')->middleware('guest');
-
 //Posts
 
 Route::post('/loginPost','LoginController@login')->name('loginPost');
