@@ -127,12 +127,12 @@
                         </div>
                         <!-- /input-group -->
                     </li>
-                    {{-- <li>
+                    <li>
                         <a href="{{ route('admin.dashboard') }}"><i class="fa fa-bar-chart fa-fw"></i> Dashboard</a>
-                    </li> --}}
+                    </li>
 
                     <li>
-                        <a href="{{ route('admin.users.create') }}"><i class="fa fa-user-plus fa-fw"></i> Create Staff</a>
+                        <a href="{{ route('users.create') }}"><i class="fa fa-user-plus fa-fw"></i> Create Staff</a>
                     </li>
 
 

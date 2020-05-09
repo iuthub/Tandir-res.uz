@@ -8,6 +8,7 @@ use App\Roles;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminUsersController extends Controller
 {
@@ -149,7 +150,9 @@ class AdminUsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+
+
     }
 
 

@@ -6,7 +6,7 @@
 
 <h1>Orders</h1>
 
-<div class="container" style="width: 100%;">
+<div class="container" style="width: 100%;    margin-left: -26px;">
 
     <table class="table table-hover table-bordered table-responsive">
       <thead>
@@ -21,7 +21,8 @@
           <th>Total Price</th>
           <th>Is Approved</th>
           <th>Approve</th>
-          <th>Edit<br>Delete</th>
+          <th>Disapprove</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -45,12 +46,9 @@
                     <td> Disapproved</td>
                 @endif
 
-
-                <th><a href="#" class="btn btn-primary" style="margin:5px">Approve</a><br>
-                <a href="#" class="btn btn-danger">Disapprove</a></th>
-                <th><a href="#" class="btn btn-primary" style="margin: 5px">Edit</a><br>
-                <a href="#" class="btn btn-danger">Delete</a></th>
-
+                <td><a href="#" class="btn btn-primary">Approve</a></td>
+                <td><a href="#" class="btn btn-danger">Disapprove</a></td>
+                <td><a href="#" class="btn btn-danger">Delete</a></td>
             </tr>
         @endforeach
     @endif
