@@ -3,7 +3,7 @@
 
 @section('content')
 
-<h1>Admin Dashboard Page<h1>
+<h1>Dashboard<h1>
 
     <canvas id="myChart"></canvas>
     <hr>

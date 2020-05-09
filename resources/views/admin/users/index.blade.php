@@ -19,7 +19,7 @@
           <th>Phone Number</th>
           <th>Email</th>
           <th>Edit</th>
-          <th>Delete</th>
+
         </tr>
       </thead>
       <tbody>
@@ -66,7 +66,7 @@
                 <td>{{ $staff->phone_number }}</td>
                 <td>{{ $staff->email }}</td>
                 <td><a href="{{ route('users.edit',$staff->id) }}" class="btn btn-primary">Edit</a></td>
-                <td><a href="#" class="btn btn-danger">Delete</a></td>
+
             </tr>
             @endif
         @endforeach

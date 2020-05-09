@@ -65,4 +65,12 @@
 
 
 
+{!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy',$staff->id]]) !!}
+
+
+<div class="form_group">
+    {!! Form::submit('Delete User', ['class' => 'btn btn-danger']) !!}
+</div>
+
+
 @endsection
