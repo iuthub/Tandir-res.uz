@@ -34,7 +34,7 @@ We tried to treat this assignment process as real as possible.
 
 ## How to use it as an Administrator
 
-1. Open <a href="http://admin.tandir-res.uz/"><b>admin.tandir-res.uz</b></a>
+1. Open <a href="http://tandir-res.uz/admin/"><b>tandir-res.uz/admin</b></a>
 2. Log-in.
 3. View and analyse all tables about your business.
 4. Create/edit/delete some features from your products list.
