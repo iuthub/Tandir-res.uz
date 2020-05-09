@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Board_Orders;
 use App\Meal_Orders;
-use App\Meals;
 use App\Orders;
 use Illuminate\Http\Request;
 
-class AdminOrdersController extends Controller
+class AdminMealOrdersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +15,15 @@ class AdminOrdersController extends Controller
      */
     public function index()
     {
-        $orders = Orders::all();
+        $meal_orders = Meal_Orders::all();
 
-        $orders = $orders->sortBy('date',SORT_REGULAR,false);
+        $meal_orders = $meal_orders->sortBy('date',SORT_REGULAR,false);
+
+        $orders = Orders::select('first_name')->get();
 
 
-        return view('admin.orders.orders',compact('orders'));
+
+        return view('admin.orders.meal_order',compact('meal_orders'));
     }
 
     /**
@@ -43,7 +44,7 @@ class AdminOrdersController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
@@ -52,12 +53,9 @@ class AdminOrdersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $meal_orders = Meal_Orders::all();
-
-
-        return view('admin.orders.meal_order',compact('meal_orders'));
+        //
     }
 
     /**

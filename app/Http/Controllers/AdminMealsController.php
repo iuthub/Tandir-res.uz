@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Board_Orders;
-use App\Meal_Orders;
+use App\Category;
+use App\Http\Requests\MealRequest;
 use App\Meals;
-use App\Orders;
 use Illuminate\Http\Request;
 
-class AdminOrdersController extends Controller
+class AdminMealsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +16,10 @@ class AdminOrdersController extends Controller
      */
     public function index()
     {
-        $orders = Orders::all();
-
-        $orders = $orders->sortBy('date',SORT_REGULAR,false);
+        $meals = Meals::all();
 
 
-        return view('admin.orders.orders',compact('orders'));
+        return view('meals.meal_view',compact('meals'));
     }
 
     /**
@@ -32,7 +29,9 @@ class AdminOrdersController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::pluck('name','id')->all();
+
+        return view('meals.create_meal',compact('categories'));
     }
 
     /**
@@ -41,8 +40,19 @@ class AdminOrdersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MealRequest $request)
     {
+        $meals = new Meals();
+
+        $meals->name = $request->name;
+        $meals->category_id = $request->category;
+        $meals->price = $request->price;
+        $meals->portion = $request->portion;
+        $meals->ingredients = $request->ingredients;
+
+        $meals->save();
+
+        return redirect('admin/meals');
 
     }
 
@@ -52,12 +62,9 @@ class AdminOrdersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $meal_orders = Meal_Orders::all();
-
-
-        return view('admin.orders.meal_order',compact('meal_orders'));
+        //
     }
 
     /**
