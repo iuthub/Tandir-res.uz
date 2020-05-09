@@ -45,20 +45,20 @@
 
                         {!! Form::open(['method'=>'PATCH','action'=>['AdminOrdersController@update',$order->id]]) !!}
 
-                        <input type="hidden" name="is_active" value="0">
+                        <input type="hidden" name="is_approved" value="0">
 
                             <div class="form-group">
-                                {!! Form::submit('Unapprove', ['class'=>'btn btn-danger']) !!}
+                                {!! Form::submit('Unapprove', ['class'=>'btn btn-succes']) !!}
                             </div>
                             {!! Form::close() !!}
                     @else
 
                     {!! Form::open(['method'=>'PATCH','action'=>['AdminOrdersController@update',$order->id]]) !!}
 
-                        <input type="hidden" name="is_active" value="1">
+                        <input type="hidden" name="is_approved" value="1">
 
                             <div class="form-group">
-                                {!! Form::submit('Approve', ['class'=>'btn btn-primary']) !!}
+                                {!! Form::submit('Approve', ['class'=>'btn btn-info']) !!}
                             </div>
                             {!! Form::close() !!}
 
@@ -76,7 +76,19 @@
 
                 <td><a href="#" class="btn btn-primary">Approve</a></td>
                 <td><a href="#" class="btn btn-danger">Disapprove</a></td> --}}
-                <td><a href="#" class="btn btn-primary">Edit</a></td>
+
+                <td>
+
+
+                    {!! Form::open(['method'=>'DELETE','action'=>['AdminOrdersController@destroy',$order->id]]) !!}
+
+                        <div class="form-group">
+                                {!! Form::submit('Delete', ['class'=>'btn btn-danger']) !!}
+                        </div>
+                    {!! Form::close() !!}
+
+                </td>
+
             </tr>
         @endforeach
     @endif

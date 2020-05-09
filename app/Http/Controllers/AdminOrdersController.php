@@ -80,7 +80,22 @@ class AdminOrdersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        // $order = Orders::find($id);
+
+        // $order->is_approved = $request->is_approved;
+
+        // $order->save();
+
+
+        Orders::findOrFail($id)->update($request->all());
+
+        return redirect('admin/orders');
+
+
+
+
+
     }
 
     /**
