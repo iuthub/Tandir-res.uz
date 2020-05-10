@@ -1,0 +1,51 @@
+.mealContainer
+{
+	display:block;
+}
+
+@media(min-width:767px)
+{
+	.mealContainer,.drinkContainer,.saladContainer
+	{
+		display:grid;
+		grid-template-columns:1fr 1fr;
+		grid-gap:1em;
+		grid-template-rows:auto;
+		justify-content: left;
+	}
+}
+
+.drinkContainer,.saladContainer{
+	display:none;
+}
+
+.meal
+{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	background-color: rgba(128,128,128,0.2);
+}
+
+.img{
+	flex:0 0 auto;
+}
+
+.img > img{
+	width:8em;
+	height:auto;
+}
+.info{
+	flex:1;
+	padding:1em 2em;
+}
+
+.info > h3{
+	font-size:1.25em;
+}
+
+.info > p{
+	margin:0;
+	font-size:0.85em;
+}
+
