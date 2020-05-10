@@ -85,8 +85,13 @@ class PagesController extends Controller
             $expld=explode(':',$o);
             $m_id=$expld[0];
             $m_quantity=$expld[1];
+            //update meals table
+            $remainder_portion=DB::table('meals')->where('id',$m_id)->first()->portion - $m_quantity;
+            DB::table('meals')->where('id',$m_id)->update(['portion'=>$remainder_portion]);
+
             $tm_price=DB::table('meals')->where('id',$m_id)->first()->price * $m_quantity;
-                DB::table('meal_orders')->insert([
+            //making meal order
+            DB::table('meal_orders')->insert([
                 'order_id'=>$o_id,
                 'meal_id'=>$m_id,
                 'quantity'=>$m_quantity,
@@ -94,7 +99,6 @@ class PagesController extends Controller
                 'total_price'=>$tm_price
             ]);
         }
-        
         return redirect()->route('service')->with('success','Order has been reserved');
     }
 }

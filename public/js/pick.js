@@ -72,7 +72,11 @@ submitPickForm.addEventListener('click',function(event){
 		// console.log(event.target.parentNode.childNodes[2].innerText.match(/\d+/)[0]);
 		totalSalePrice.innerText=Number(totalSalePrice.innerText) -
 		Number(event.target.parentNode.childNodes[2].innerText.match(/\d+/)[0]);
+		let s_table=event.target.parentNode.parentNode;
 		event.target.parentNode.remove();
+		console.log(s_table);
+		if(s_table.childNodes.length==2)
+				selectList.style.display='none';
 	});
 
 	row.append(p_name,p_definition,p_price,p_picked,excludeButton);
@@ -112,7 +116,6 @@ function onClickPick(event)
 		document.querySelector('.p_definition').innerText=currentProductDefinition;
 		document.querySelector('.p_price').innerText=currentProductPrice;
 		document.querySelector('.p_portion').innerText=currentProductPortion;
-		console.log(quantityInput);
 		quantityInput.max=currentProductPortion;
 		totalPrice.innerText=currentProductPrice + '$';
 		pickForm.style.display='block';

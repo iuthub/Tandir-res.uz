@@ -15,7 +15,7 @@
 		<div class="info">
 			<p>Product Name: <span class="p_name"></span> </p>
 			<p class="hidden">Product Definition: <span class="p_definition"></span> </p>
-			<p>Product Price: <span class="p_price"></span> </p>
+			<p>Product Price: <span class="p_price"></span>$ </p>
 			<p class="hidden">Available Portion: <span class="p_portion"></span> </p>
 		</div>
 		
