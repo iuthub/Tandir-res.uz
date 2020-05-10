@@ -2,7 +2,7 @@
 
 ## Tandir
 
-#### [Tandir.uz](https://westchester.uz/tandir) - here you can check pure front-end of the assignment.
+#### [Tandir-res.uz](https://westchester.uz/tandir) - here you can check pure front-end of the assignment.
 
 **Tandir** brand name has created by Techieland for this assignment only \(we haven't checked weather this brand name is available out there or not\) and we have craeted simple logo for this.
 
