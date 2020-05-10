@@ -28,12 +28,12 @@
         @foreach ($meal_orders as $meal_order)
 
             <tr>
-                <td>{{ $meal_orders->id }}</td>
-                <td>{{ $meal_orders->order_id }}</td>
-                <td>{{ $meal_orders->meal_id }}</td>
-                <td>{{ $meal_orders->quantity }}</td>
-                <td>{{ $meal_orders->order_time }}</td>
-                <td>{{ $meal_orders->total_price }}</td>
+                <td>{{ $meal_order->id }}</td>
+                <td>{{ $meal_order->order_id }}</td>
+                <td>{{ $meal_order->meal_id }}</td>
+                <td>{{ $meal_order->quantity }}</td>
+                <td>{{ $meal_order->order_time }}</td>
+                <td>{{ $meal_order->total_price }}</td>
                 <td><a href="#" class="btn btn-primary">Edit</a></td>
                 <td><a href="#" class="btn btn-danger">Delete</a></td>
             </tr>

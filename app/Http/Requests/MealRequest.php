@@ -28,8 +28,8 @@ class MealRequest extends FormRequest
             'name' =>'required|min:5',
             'category' =>'required',
             'price' =>'required',
-            'portion'  =>'required',
-            'ingredients' =>'required'
+            'portion'  =>'required'
+           // 'definition' =>'required'
 
         ];
     }

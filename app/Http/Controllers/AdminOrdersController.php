@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Board_Orders;
 use App\Meal_Orders;
 use App\Meals;
 use App\Orders;
