@@ -2,6 +2,7 @@
 
 use App\Clients;
 use App\Http\Controllers\AdminUsersController;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -76,3 +77,27 @@ Route::resource('admin/meals', 'AdminMealsController');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/',function(){
+
+    $data = [
+
+        'title'=>'Hi Murodjon',
+        'content'=>'You reservation oder approved'
+    ];
+
+    Mail::send('mail', $data, function ($message) {
+        $message->from('tandir.res.uz@gmail.com', 'Tandir Rstoran');
+        $message->sender('tandir.res.uz@gmail.com', 'Tandirchilar');
+        $message->to('murodbek99.murodov@gmail.com', 'Murodjon');
+    //   $message->cc('john@johndoe.com', 'John Doe');
+    //     $message->bcc('john@johndoe.com', 'John Doe');
+    //     $message->replyTo('john@johndoe.com', 'John Doe');
+        $message->subject('Order Approvment');
+        // $message->priority(3);
+        // $message->attach('pathToFile');
+    });
+
+});
+

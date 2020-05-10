@@ -8,6 +8,7 @@ use App\Meals;
 use App\Orders;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Mail;
 
 class AdminOrdersController extends Controller
 {
@@ -82,17 +83,40 @@ class AdminOrdersController extends Controller
     public function update(Request $request, $id)
     {
 
-        // $order = Orders::find($id);
-
-        // $order->is_approved = $request->is_approved;
-
-        // $order->save();
-
 
         Orders::findOrFail($id)->update($request->all());
 
-        return redirect('admin/orders');
+        $order = Orders::findOrFail($id);
 
+        $order_customer_name = Orders::findOrFail($id)->first_name;
+        $order_customer_email = Orders::findOrFail($id)->email;
+
+        if($order->is_approved == 1)
+        {
+            $data = [
+                        'title'=>'Hi ' . $order_customer_name,
+                        'content'=>'You reservation order is approved succesfully!!'
+                    ];
+        }
+        else
+        {
+            $data = [
+                'title'=>'Hi ' . $order_customer_name,
+                'content'=>'You reservation order is unapproved unfortunately!!'
+            ];
+        }
+
+        Mail::send('mail', $data, function ($message) use ($order_customer_email,$order_customer_name)
+        {
+            $message->from('tandir.res.uz@gmail.com', 'Tandir Rstoranlar Tarmog\'i ');
+            $message->sender('tandir.res.uz@gmail.com', 'Tandirchilar');
+            $message->to($order_customer_email, $order_customer_name);
+            $message->subject('Order Approvment');
+        });
+
+
+
+            return redirect('/admin/orders');
 
 
 
