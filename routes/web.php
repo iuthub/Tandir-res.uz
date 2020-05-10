@@ -15,14 +15,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
 
 //-------------------------------ROUTE GROUP-----------------------------------------------------//
-=======
 // Route::get('/', function () {
 //     return view('welcome');
 // });
->>>>>>> 26ecd0b7b83a60d25dfb272d3ec00dc592cfcd46
 
 // Route::group(['middleware' => 'admin'], function () {
 
@@ -52,24 +49,11 @@ Route::resource('admin/meals', 'AdminMealsController');
 
 
 
-
-
-
-
 //-------------------------------END OF ROUTE GROUP-----------------------------------------------------//
 
 
 
 
-
-<<<<<<< HEAD
-
-=======
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//Route::get('/contact',function(){return view('pages.contact');})->name('contactPage');
-//>>>>>>> master
 
 
 Route::get('/', 'PagesController@index')->name('index');
@@ -84,7 +68,6 @@ Route::post('/reserve','PagesController@reserve')->name('reserve');
 Route::get('/login','LoginController@show')->name('login')->middleware('guest');
 Route::get('/register','RegisterController@show')->name('register')->middleware('guest');
 //Posts
->>>>>>> 26ecd0b7b83a60d25dfb272d3ec00dc592cfcd46
 
 
 
@@ -98,13 +81,7 @@ Route::get('/register','RegisterController@show')->name('register')->middleware(
 //-----------------------------SOBIR'S PART---------------------------------------------------//
 
 
-
 //-----------------------------END OF SOBIR'S PART---------------------------------------------------//
-
-<<<<<<< HEAD
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/',function(){
@@ -129,5 +106,3 @@ Route::get('/',function(){
 
 });
 
-=======
->>>>>>> 26ecd0b7b83a60d25dfb272d3ec00dc592cfcd46
