@@ -33,22 +33,18 @@ class AdminMealOrdersController extends Controller
                     {
                         $meal_customer = $order->first_name;
                     }
-                    else
-                    {
-                        $meal_customer = $meal_order->order_id;
-                    }
+
                     if ($meal_order->meal_id == $meal->id ) {
 
                         $meal_name = $meal->name;
 
                     }
-                    else
-                    {
-                        $meal_name = $meal_order->meal_id;
-                    }
+
                 }
             }
         }
+        $meal_customer = $meal_order->order_id;
+        $meal_name = $meal_order->meal_id;
 
         return view('admin.orders.meal_order',compact('meal_orders','meal_customer','meal_name'));
     }

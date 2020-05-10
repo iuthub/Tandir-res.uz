@@ -13,7 +13,7 @@ class MealRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,7 +26,7 @@ class MealRequest extends FormRequest
         return [
 
             'name' =>'required|min:5',
-            'category' =>'required',
+            'category_id' =>'required',
             'price' =>'required',
             'portion'  =>'required',
             'ingredients' =>'required'

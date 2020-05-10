@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Http\Requests\MealRequest;
 use App\Meals;
+use App\Photo;
 use Illuminate\Http\Request;
 
 class AdminMealsController extends Controller
@@ -42,12 +43,36 @@ class AdminMealsController extends Controller
      */
     public function store(MealRequest $request)
     {
-        $meals = new Meals();
+        // $input = $request->all();
 
+        if($file = $request->file('photo_id'))
+        {
+
+            $name = time() . $file->getClientOriginalName();
+
+            $file->move('img',$name);
+
+            $photo = new Photo;
+
+            $photo->file = $name;
+
+
+
+            $photo->save();
+
+        }
+
+
+
+        // Meals::create($input);
+        $meals = new Meals;
+
+        $meals->photo_id = $photo->id;
         $meals->name = $request->name;
-        $meals->category_id = $request->category;
+        $meals->category_id = $request->category_id;
         $meals->price = $request->price;
         $meals->portion = $request->portion;
+        $meals->is_available = $request->is_available;
         $meals->ingredients = $request->ingredients;
 
         $meals->save();
@@ -75,7 +100,11 @@ class AdminMealsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $meal = Meals::findOrFail($id);
+
+        $categories = Category::pluck('name','id')->all();
+
+        return view('meals.edit_meal',compact('meal','categories'));
     }
 
     /**
@@ -85,9 +114,22 @@ class AdminMealsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MealRequest $request, $id)
     {
-        //
+        $meal = Meals::findOrFail($id);
+
+        $meal->photo_id = $request->photo_id;
+        $meal->name = $request->name;
+        $meal->category_id = $request->category_id;
+        $meal->price = $request->price;
+        $meal->portion = $request->portion;
+        $meal->is_available = $request->is_available;
+        $meal->ingredients = $request->ingredients;
+
+        $meal->save();
+
+        return redirect('/admin/meals');
+
     }
 
     /**
@@ -98,6 +140,8 @@ class AdminMealsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Meals::findOrFail($id)->delete();
+
+        return redirect('/admin/meals');
     }
 }
