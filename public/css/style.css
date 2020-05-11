@@ -1,0 +1,364 @@
+:root {
+	font-size: calc(1vw + 0.2em);	/* FLEXABLE EM VALUE IN >768 */ 
+	--brand-red: #bf3030;
+	--brand-red-hover: #ff3030;
+	--bg-dark: #333333;
+	--bg-light: #fffbf5;
+	--goldish: #db9a64;
+}
+
+@media (max-width: 767px) {
+	:root {
+		font-size: calc(1vw + 0.6em);	/* FLEXABLE EM VALUE IN <768 */
+	}
+}
+
+body {
+	background-color: var(--bg-dark);
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	color: white;
+}
+
+footer {
+	margin: 0;
+	padding-top: 10em;
+	padding-bottom: 3em;
+	background-color: var(--bg-dark);
+	color: #737373;
+	border-color: #737373;
+	font-size: 0.85rem;
+}
+
+footer .border-top {
+	border-color: #737373!important;
+}
+
+.bg-image {
+	background-color: var(--bg-dark);
+	background-image: url("../img/bg.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+}
+
+.btn-custom {
+	color: white;
+	background-color: var(--brand-red);
+	border-color: var(--brand-red);
+	padding: 0.375rem 1.3rem;
+	font-size: 0.8rem;
+	border-radius: 0;
+}
+
+.btn-custom:hover {
+	color: white;
+	background-color: var(--brand-red-hover);
+	border-color: var(--brand-red-hover);
+}
+
+.display-4 {
+	font-weight: 500;
+}
+
+.navbar {
+	background-color: rgba(0, 0, 0, 0.8);
+	opacity: 0.8;
+	padding: 0 1em;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	border-top: 3px solid var(--brand-red);
+	transition: all 0.3s ease-out;
+}
+
+.navbar:hover {
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+#nav-list .navbar-nav {
+	margin-left: auto;
+}
+
+#nav-list .nav-link {
+	color: white;
+	opacity: 0.8;
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	transition: transform 0.07s ease-out, color 0s;
+}
+
+#nav-list .nav-link:hover {
+	color: white;
+	opacity: 1;
+	transform: translateY(5px);
+}
+
+#nav-list .btn-custom {
+	margin-left: 1rem;
+}
+
+.carousel-item {
+	background-position: 70% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: calc(27.27vw + 27.27rem);
+	height: 100vh;
+}
+
+.carousel-item::before {
+	display: block;
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.hero {
+	color: white;
+	margin-top: 8em;
+}
+
+.btn-hero {
+	margin: 0;
+	margin-top: 2em;
+	padding: 0.375em 2em;
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+.site-section {
+	background-color: var(--bg-light);
+	color: black;
+	padding: 5em;
+}
+
+/**************** GALLERY ****************/
+/****************** FALBACK ******************/
+
+.gallery-item {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+#gallery > figure {
+	display: inline-block;
+	max-width: 300px;
+	margin: 0;
+}
+
+#gallery img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+#gallery figcaption {
+	padding: 0.3em 0.8em;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	text-align: right;
+}
+
+@supports (display: grid) {
+	#gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-rows: 1fr;
+		grid-gap: 0.2em;
+		grid-auto-flow: row dense;
+	}
+
+	#gallery > figure {
+		display: flex;
+		flex-direction: column;
+		max-width: initial;
+	}
+	
+	#gallery {
+		height: 100%;
+		width: 100%;
+	}
+
+	#gallery img {
+		flex: 1;
+		flex-basis: 200px;
+		object-fit: cover;
+		max-width: 100%;
+	}
+
+	/***************************	
+	#gallery figcaption {
+		padding: 0.3em 0.8em;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: white;
+		text-align: right;
+	}
+	***************************/
+
+	.featured {
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+}
+
+#chef {
+	background-color: rgba(0, 0, 0, 0.1);
+	padding-top: 3em;
+	margin-bottom: 10em;
+}
+
+
+#chef img {
+	max-width: 200px;
+	max-height: 200px;
+	margin: 3em 0;
+}
+#chef p {
+	font-size: 0.9em;
+}
+
+/*************************** PRODUCTS ***************************/
+
+.section-heading {
+	color: black;
+	justify-content: center;
+}
+
+.section-heading div {
+	text-align: center;
+}
+
+.section-body {
+	color: black;
+	justify-content: center;
+	margin-top: 5em;
+}
+
+/*****************************************
+#delicious .deliciouss {
+	background-color: var(--bg-light);
+	border-radius: .3em;
+	padding: 4em 3em;
+	color: black;
+}
+*****************************************/
+
+#delicious {
+	background-color: var(--bg-light);
+	padding: 4em 3em;
+	color: black;
+}
+
+#delicious ul {
+	flex-wrap: nowrap;
+	margin-bottom: 5em;
+	border-bottom: 1px solid #D5D5D5;
+}
+
+#delicious ul .active {
+	color: var(--goldish);
+	border-bottom: 3px solid var(--goldish);
+}
+
+#delicious ul a {
+	color: black;
+	font-size: 1rem;
+}
+
+#delicious .tab-pane img {
+	max-height: 8em;
+	max-width: 8em;
+}
+
+.single_delicious {
+	margin-bottom: 3em;
+}
+
+.single_delicious .info {
+	padding-left: 1em;
+}
+
+.single_delicious .info h3 {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.single_delicious .info p {
+	font-size: 0.8rem;
+	font-weight: 300;
+	margin-top: 0.7em;
+	margin-bottom: 1.3em;
+}
+
+.single_delicious .info span {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--goldish);
+}
+
+/*************************** CONTACT ***************************/
+
+#contact-main {
+	position: relative;
+	background-position: 80% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: calc(27.27vw + 27.27rem);
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#contact-main::before {
+	display: block;
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .7);
+}
+
+.breadcrumb {
+	background-color: transparent;
+	font-size: 1.3rem;
+	padding: 0;
+	margin-top: 3em;
+}
+
+.breadcrumb a {
+	color: var(--brand-red);
+}
+
+.breadcrumb-item.active {
+	color: #8B959E;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+	content: ">";
+}
+
+#contact {
+	padding: 5em 0;
+	color: black;
+}
+
+#contact form, #contact .address, #contact .more-info {
+	border-radius: 0.3em;
+}
+
+#contact .address, #contact .more-info p {
+	font-size: 0.8rem;
+}
