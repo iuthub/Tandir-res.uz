@@ -1,79 +1,217 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
+<p align="center"><a href="https://www.tandir-res.uz"><img src="./assets/logo tandir.jpg" width="800"></a></p>
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+	<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+	<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+	<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+	<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## About <a href="http://tandir-res.uz/"><b>Tandir-res.uz</b></a>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Tandir is a software solution for cafe and restourant businesses made in Laravel framework and made with &#9829; by <sup>1</sup>Techieland&#8482;
+- Simple
+- Powerful
+- User-friendly
+- Open source
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+PS: **Tandir** brand name has created by Techieland for this assignment only \(we haven't checked weather this brand name is available out there or not\) and we have craeted simple logo for this.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## <sup>1</sup> Techieland
 
-## Learning Laravel
+**Techieland** is our teamname who creates software solutions for businesses.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+We tried to treat this assignment process as real as possible.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## How to use it as a Client
 
-## Laravel Sponsors
+- It's really easy! 
+- Reserve a table and pre-order dishes righ away from site!
+- You can do it in 3 steps!
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Open Home page, click red "Order Now" button
+2. Fill the form for reservation and go down.
+3. If you want, you can pre-order dishes for a reserved day or just click "Comlete" button and complete reservation process!
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
+## How to use it as an Administrator
 
-## Contributing
+1. Open <a href="http://tandir-res.uz/admin/"><b>tandir-res.uz/admin</b></a>
+2. Log-in.
+3. View and analyse all tables about your business.
+4. Create/edit/delete some features from your products list.
+5. Create/edit/delete users and admins.
+6. Approve the order and send email service.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+- <b>We are planning to do a Docker image for that app, so in the near future new version will be available on DockerHub also.</b> 
+- After release you will need to just pull the image and run container.
+- <a href="https://www.docker.com/">Learn more about Docker there!</a>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Migrations
 
-## Security Vulnerabilities
+<p align="center"><img src="./assets/resto.png"></p>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<h3>Tools used</h3>
+<ol>
+	<li><a href="https://dbdiagram.io/">dbdiagram.io - web-site for drawing EER Diagrams</a></li>
+	<li><a href="https://phpMyAdmin.net">phpMyAdmin</a></li>
+	<li><a href="dev.mysql.com">MariaDB | MySQL</a></li>
+	<li><a href="https://Mockgaroo.com/">Mockgaroo - generator of dump information</a></li>
+</ol>
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h3>Tables</h3>
+
+<table>
+<caption>Roles</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>role</td>
+        </tr>
+        <tr>
+            <td>is_admin</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>users</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>image</td>
+        </tr>
+        <tr>
+            <td>role_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>username</td>
+        </tr>
+        <tr>
+            <td>password</td>
+        </tr>
+        <tr>
+            <td>first_name</td>
+        </tr>
+        <tr>
+            <td>last_name</td>
+        </tr>
+        <tr>
+            <td>phone_number</td>
+        </tr>
+        <tr>
+            <td>email</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>category</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>name</td>
+        </tr>
+        <tr>
+            <td>description</td>
+        </tr>
+        <tr>
+            <td>portion_units</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>meals</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>        
+        <tr>
+            <td>name</td>
+        </tr>
+        <tr>
+            <td>image</td>
+        </tr>
+        <tr>
+            <td>category_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>price</td>
+        </tr>
+        <tr>
+            <td>portion</td>
+        </tr>
+        <tr>
+            <td>is_available</td>
+        </tr>
+        <tr>
+            <td>ingredients</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>orders</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+            <td>first_name</td>
+        </tr>
+        <tr>
+            <td>email</td>
+        </tr>
+        <tr>
+            <td>phone_number</td>
+        </tr>
+        <tr>
+            <td>number_of_people</td>
+        </tr>
+        <tr>
+            <td>date</td>
+        </tr>
+        <tr>
+            <td>time</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>total_price</td>
+        </tr>
+            <td>is_approved</td>
+        </tr>
+        <tr>
+            <td>approved_by</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption>meal_orders</caption>
+    <tbody>
+        <tr>
+            <td><b>id</b></td>
+        </tr>
+        <tr>
+            <td>order_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>meal_<b>id</b></td>
+        </tr>
+        <tr>
+            <td>quantity</td>
+        </tr>
+        <tr>
+            <td>order_time</td>
+        </tr>
+        <tr>
+            <td>total_price</td>
+        </tr>
+    </tbody>
+</table>
