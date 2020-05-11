@@ -1,3 +1,9 @@
+- Initially there were more than 94 commits. 
+- They have been accidentally restored because of attemts to rebase master branch to newer one. 
+- Also we knew that it's risky so did some screenshoots
+- <a href="./commits.png">Screenshoot 1</a>
+- <a href="./commits1.png">Screenshoot 2</a>
+
 <p align="center"><a href="https://www.tandir-res.uz"><img src="./assets/logo tandir.jpg" width="800"></a></p>
 <p align="center">
 	<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
