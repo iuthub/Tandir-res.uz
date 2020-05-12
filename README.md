@@ -1,9 +1,9 @@
->**Initially there were more than 94 commits. 
->**They have been accidentally restored because of attemts to rebase master branch to newer one. 
->**Also we knew that it's risky so did some screenshoots
->**<a href="./commits.png">Screenshoot 1</a>
->**<a href="./commits1.png">Screenshoot 2</a>
->**Also it's recommended to test this project on localhost. Try instructions given below.
+>**Initially there were more than 94 commits.<br> 
+>They have been accidentally restored because of attemts to rebase master branch to newer one.<br> 
+>We knew that it's risky so did some screenshoots<br>
+><a href="./commits.png">Screenshoot 1</a><br>
+><a href="./commits1.png">Screenshoot 2</a><br>
+>Also it's recommended to test this project on localhost. Try instructions given below.
 
 <p align="center"><a href="https://www.tandir-res.uz"><img src="./assets/logo tandir.jpg" width="800"></a></p>
 <p align="center">
@@ -39,18 +39,9 @@ We tried to treat this assignment process as real as possible.
 - Steps to run the software on your local machine:
 1. Clone this repository to "xampp/htdocs" directory.
 2. Open PowerShell and run commands below step by step. 
-3. 
-```bash
-  php -r "file_exists('.env') || copy('.env.example', '.env');"
-```
-4. 
-```bash
-  composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-```
-5. 
-```bash
-  php artisan key:generate
-```
+3. ```php -r "file_exists('.env') || copy('.env.example', '.env');"```
+4. ```composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist```
+5. ```php artisan key:generate```
 6. Run MySQL server via XAMPP
 7. Create Data Base and name it "laravel"
 8. Change properties in .env file as follows<br>
@@ -62,7 +53,7 @@ DB_DATABASE=laravel
 DB_USERNAME=root (by default, but if you have another username write it)
 DB_PASSWORD= (by default empty, if you have password write it there)
 ```
-7. On PowerShell run 
+7. On PowerShell and run 
 ```bash
 php artisan migrate
 ```
@@ -70,7 +61,7 @@ php artisan migrate
 
 
 >**We are planning to do a Docker image for that app, so in the near future new version will be available on DockerHub also. 
->**After release you will need to just pull the image and run container.
+>After release you will need to just pull the image and run container.
 - <a href="https://www.docker.com/">Learn more about Docker there!</a>
 
 ## How to use it as a Client
